@@ -47,10 +47,6 @@ angular.module('app').controller("PluginController", ["$scope", "Kong", "$locati
 
     $scope.save = function () {
         beforeSave($scope.plugin.config, $scope.plugin_schema.fields);
-        if (!$scope.plugin.api_id) {
-            Alert.error("You must select an API.");
-            return;
-        }
         if (!$scope.plugin.name) {
             Alert.error("You must choose a plugin.");
             return;
